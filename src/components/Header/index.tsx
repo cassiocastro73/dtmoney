@@ -3,12 +3,16 @@ import { Container,
         Content
 } from './styles'
 
-export function Header(){
+interface HeaderProps{
+    openNewTransaction: ()=> void;
+}
+
+export function Header({openNewTransaction}: HeaderProps){
     return(
         <Container>
             <Content>
             <img src={logoImg} alt="dt money" />
-            <button type="button">
+            <button type="button" onClick={openNewTransaction}>
                 Nova Transação
             </button>
             </Content>
