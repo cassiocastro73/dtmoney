@@ -17,7 +17,7 @@ createServer({
           title: "Freelance de website",
           type: 'deposit',
           category: "Dev",
-          amout: 6000,
+          amount: 6000,
           createdAt: new Date('2022-02-12 09:00:00'),
         },
 
@@ -26,7 +26,7 @@ createServer({
           title: "Aluguel",
           type: 'withdraw',
           category: "Casa",
-          amout: 1100,
+          amount: 1100,
           createdAt: new Date('2022-02-14 11:00:00'),
         }
       ]
@@ -43,7 +43,7 @@ createServer({
     this.post('/transactions', (schema, request)=>{
       const data = JSON.parse(request.requestBody)
 
-      return schema.create('tranction', data);
+      return schema.create('transaction', data);
     })
     
   }
